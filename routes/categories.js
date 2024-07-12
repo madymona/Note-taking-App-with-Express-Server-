@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAllCategories, getCategoryById, createCategory, updateCategory, deleteCategory } = require('../data/categories');
+const { getAllCategories, getCategoryById, createCategory, updateCategory, deleteCategory } = require('../module/categories');
 
 const router = express.Router();
 
