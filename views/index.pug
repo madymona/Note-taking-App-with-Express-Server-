@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking App</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <img src="https://miro.medium.com/v2/resize:fit:1160/1*Xy0_AI0MfCZUHD2t7ElbHg@2x.jpeg" alt="Logo" class="logo">
+            <h1>UpNote</h1>
+        </header>
+        <form class="note-form" id="note-form">
+            <input type="text" id="note-title" placeholder="Title">
+            <textarea id="note-content" placeholder="Content"></textarea>
+            <select id="note-category">
+                <option value="" disabled selected>Select Category</option>
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+                <option value="Ideas">Ideas</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Travel">Travel</option>
+                <option value="Health">Health</option>
+                <option value="Finance">Finance</option>
+                <option value="Books">Books</option>
+                <option value="Events">Events</option>
+                <option value="Movies/TV Shows">Movies/TV Shows</option>
+                <option value="Contacts">Contacts</option>
+                <option value="Reminders">Reminders</option>
+            </select>
+            <button type="submit">Add Note</button>
+        </form>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search notes...">
+        </div>
+        <div class="notes-list" id="notes-list"></div>
+    </div>
+    <template id="note-template">
+        <div class="note">
+            <h2 class="note-title"></h2>
+            <p class="note-content"></p>
+            <div class="note-category"></div>
+            <button class="delete">Delete</button>
+            <button class="pin">Pin</button>
+            <button class="favorite">Favorite</button>
+        </div>
+    </template>
+    <script src="./index.js"></script>
+</body>
+</html>

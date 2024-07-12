@@ -1,0 +1,175 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffcc33, #ff99cc);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#app {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    max-width: 100%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+}
+
+.header .logo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #ff3366;
+}
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.note-form input, .note-form textarea, .note-form select {
+    width: 95%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-form input:focus, .note-form textarea:focus, .note-form select:focus {
+    border-color: #ff3366;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 51, 102, 0.2);
+}
+
+.note-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff3366;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-form button:hover {
+    background-color: #cc0033;
+    box-shadow: 0 0 10px rgba(204, 0, 51, 0.2);
+}
+
+.search-bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 95%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #ff3366;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 51, 102, 0.2);
+}
+
+.notes-list {
+    margin-top: 20px;
+}
+
+.note {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.note h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #ff3366;
+}
+
+.note p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.note .category {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.note button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note button.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.note button.delete:hover {
+    background-color: #c82333;
+    box-shadow: 0 0 10px rgba(200, 35, 51, 0.2);
+}
+
+.note button.pin {
+    background-color: #ffc107;
+    color: white;
+}
+
+.note button.pin:hover {
+    background-color: #e0a800;
+    box-shadow: 0 0 10px rgba(224, 168, 0, 0.2);
+}
+
+.note button.favorite {
+    background-color: #28a745;
+    color: white;
+}
+
+.note button.favorite:hover {
+    background-color: #218838;
+    box-shadow: 0 0 10px rgba(33, 136, 56, 0.2);
+}
