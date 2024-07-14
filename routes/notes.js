@@ -3,9 +3,19 @@ const { getAllNotes, getNoteById, createNote, updateNote, deleteNote } = require
 
 const router = express.Router();
 
-// Get all notes
+// Get all notes with o filtering by title, content, and category
 router.get('/', (req, res) => {
-    const notes = getAllNotes();
+    const { title, content, category } = req.query;
+    let notes = getAllNotes();
+    if (title) {
+        notes = notes.filter(note => note.title.includes(title));
+    }
+    if (content) {
+        notes = notes.filter(note => note.content.includes(content));
+    }
+    if (category) {
+        notes = notes.filter(note => note.category === category);
+    }
     res.json(notes);
 });
 
